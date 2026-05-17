@@ -1,0 +1,1306 @@
+{
+    "preset_info": {
+        "archive": "",
+        "author": "",
+        "description": "",
+        "email": "",
+        "features": "",
+        "pflags": 0,
+        "hash": null,
+        "height": 442,
+        "id": "e0e4678a-f9f2-4089-b736-3079ef2bf6eb",
+        "locked": false,
+        "release": 381530915,
+        "ts": 1778964085861,
+        "title": "C9D_Taskbar",
+        "version": 15,
+        "width": 1440,
+        "xscreens": 0,
+        "yscreens": 0
+    },
+    "preset_root": {
+        "internal_type": "OverlapLayerModule",
+        "globals_list": {
+            "total": {
+                "index": 1,
+                "type": "TEXT",
+                "title": "Total",
+                "description": "The total number of visible squares (Set slider range: 1 to 8).",
+                "min": 1,
+                "max": 8,
+                "value": "7"
+            },
+            "active": {
+                "index": 2,
+                "type": "TEXT",
+                "title": "Active",
+                "description": "Tracks which square is tapped (Set initial value to 0).",
+                "value": "0",
+                "min": 0,
+                "max": 8
+            },
+            "totalw": {
+                "index": 12,
+                "type": "TEXT",
+                "title": "TotalW",
+                "description": "Total width of the taskbar container (e.g., 720).",
+                "min": 0,
+                "max": 720,
+                "value": "$si(rwidth)$"
+            },
+            "totalh": {
+                "index": 13,
+                "type": "TEXT",
+                "title": "TotalH",
+                "description": "Total height of the taskbar container (e.g., 200).",
+                "value": "$si(rheight)$",
+                "min": 0,
+                "max": 720
+            },
+            "basecol": {
+                "index": 14,
+                "type": "TEXT",
+                "title": "BaseCol",
+                "description": "The background color of a functional app square (e.g., #FF2C2C2C).",
+                "value": "#FF2C2C2C"
+            },
+            "altcol": {
+                "index": 15,
+                "type": "TEXT",
+                "title": "AltCol",
+                "description": "The darker color for the \"Back\" and \"Reset/Blank\" squares (e.g., #FF1A1A1A).",
+                "value": "#FF1A1A1A"
+            },
+            "textcol": {
+                "index": 16,
+                "type": "TEXT",
+                "title": "TextCol",
+                "description": "The standard text color (e.g., #FFFFFFFF).",
+                "value": "#FFFFFFFF"
+            },
+            "rows": {
+                "index": 17,
+                "type": "TEXT",
+                "title": "Rows",
+                "description": "Global Number Formula",
+                "value": "$if(gv(Total) <= 4, 1, 2)$"
+            },
+            "r1c": {
+                "index": 18,
+                "type": "TEXT",
+                "title": "R1C",
+                "description": "(Type: Number — Row 2 Count)",
+                "value": "$if(gv(Total) <= 4, gv(Total), mu(ceil, gv(Total)/2))$"
+            },
+            "r2c": {
+                "index": 19,
+                "type": "TEXT",
+                "title": "R2C",
+                "description": "(Type: Number — Row 2 Count)",
+                "value": "$if(gv(Total) <= 4, 0, mu(floor, gv(Total)/2))$"
+            },
+            "app1_t": {
+                "index": 23,
+                "type": "TEXT",
+                "title": "app1_t",
+                "value": "Firefox"
+            },
+            "app1_i": {
+                "index": 24,
+                "type": "TEXT",
+                "title": "app1_i",
+                "value": "intent://firefox"
+            },
+            "app1_icon": {
+                "index": 25,
+                "type": "TEXT",
+                "title": "app1_icon",
+                "value": "brand-firefox"
+            },
+            "app1_ht1": {
+                "index": 26,
+                "type": "TEXT",
+                "title": "app1_ht1",
+                "value": "Back"
+            },
+            "app1_hi1": {
+                "index": 27,
+                "type": "TEXT",
+                "title": "app1_hi1",
+                "value": "0"
+            },
+            "app1_hicon1": {
+                "index": 28,
+                "type": "TEXT",
+                "title": "app1_hicon1",
+                "value": "arrow-left"
+            },
+            "app1_ht2": {
+                "index": 29,
+                "type": "TEXT",
+                "title": "app1_ht2",
+                "value": ""
+            },
+            "app1_hi2": {
+                "index": 30,
+                "type": "TEXT",
+                "title": "app1_hi2",
+                "value": ""
+            },
+            "app1_hicon2": {
+                "index": 31,
+                "type": "TEXT",
+                "title": "app1_hicon2",
+                "value": ""
+            },
+            "app1_ht3": {
+                "index": 32,
+                "type": "TEXT",
+                "title": "app1_ht3",
+                "value": ""
+            },
+            "app1_hi3": {
+                "index": 33,
+                "type": "TEXT",
+                "title": "app1_hi3",
+                "value": ""
+            },
+            "app1_hicon3": {
+                "index": 34,
+                "type": "TEXT",
+                "title": "app1_hicon3",
+                "value": ""
+            },
+            "app1_ht4": {
+                "index": 35,
+                "type": "TEXT",
+                "title": "app1_ht4",
+                "value": ""
+            },
+            "app1_hi4": {
+                "index": 36,
+                "type": "TEXT",
+                "title": "app1_hi4",
+                "value": ""
+            },
+            "app1_hicon4": {
+                "index": 37,
+                "type": "TEXT",
+                "title": "app1_hicon4",
+                "value": ""
+            },
+            "app1_ht5": {
+                "index": 38,
+                "type": "TEXT",
+                "title": "app1_ht5",
+                "value": ""
+            },
+            "app1_hi5": {
+                "index": 39,
+                "type": "TEXT",
+                "title": "app1_hi5",
+                "value": ""
+            },
+            "app1_hicon5": {
+                "index": 40,
+                "type": "TEXT",
+                "title": "app1_hicon5",
+                "value": ""
+            },
+            "app1_ht6": {
+                "index": 41,
+                "type": "TEXT",
+                "title": "app1_ht6",
+                "value": ""
+            },
+            "app1_hi6": {
+                "index": 42,
+                "type": "TEXT",
+                "title": "app1_hi6",
+                "value": ""
+            },
+            "app1_hicon6": {
+                "index": 43,
+                "type": "TEXT",
+                "title": "app1_hicon6",
+                "value": ""
+            },
+            "app1_ht7": {
+                "index": 44,
+                "type": "TEXT",
+                "title": "app1_ht7",
+                "value": ""
+            },
+            "app1_hi7": {
+                "index": 45,
+                "type": "TEXT",
+                "title": "app1_hi7",
+                "value": ""
+            },
+            "app1_hicon7": {
+                "index": 46,
+                "type": "TEXT",
+                "title": "app1_hicon7",
+                "value": ""
+            },
+            "app1_ht8": {
+                "index": 47,
+                "type": "TEXT",
+                "title": "app1_ht8",
+                "value": ""
+            },
+            "app1_hi8": {
+                "index": 48,
+                "type": "TEXT",
+                "title": "app1_hi8",
+                "value": ""
+            },
+            "app1_hicon8": {
+                "index": 49,
+                "type": "TEXT",
+                "title": "app1_hicon8",
+                "value": ""
+            },
+            "app2_t": {
+                "index": 50,
+                "type": "TEXT",
+                "title": "app2_t",
+                "value": "iHeart"
+            },
+            "app2_i": {
+                "index": 51,
+                "type": "TEXT",
+                "title": "app2_i",
+                "value": "intent://iheart"
+            },
+            "app2_icon": {
+                "index": 52,
+                "type": "TEXT",
+                "title": "app2_icon",
+                "value": "radio"
+            },
+            "app2_ht1": {
+                "index": 53,
+                "type": "TEXT",
+                "title": "app2_ht1",
+                "value": ""
+            },
+            "app2_hi1": {
+                "index": 54,
+                "type": "TEXT",
+                "title": "app2_hi1",
+                "value": ""
+            },
+            "app2_hicon1": {
+                "index": 55,
+                "type": "TEXT",
+                "title": "app2_hicon1",
+                "value": ""
+            },
+            "app2_ht2": {
+                "index": 56,
+                "type": "TEXT",
+                "title": "app2_ht2",
+                "value": "Back"
+            },
+            "app2_hi2": {
+                "index": 57,
+                "type": "TEXT",
+                "title": "app2_hi2",
+                "value": "0"
+            },
+            "app2_hicon2": {
+                "index": 58,
+                "type": "TEXT",
+                "title": "app2_hicon2",
+                "value": "arrow-left"
+            },
+            "app2_ht3": {
+                "index": 59,
+                "type": "TEXT",
+                "title": "app2_ht3",
+                "value": ""
+            },
+            "app2_hi3": {
+                "index": 60,
+                "type": "TEXT",
+                "title": "app2_hi3",
+                "value": ""
+            },
+            "app2_hicon3": {
+                "index": 61,
+                "type": "TEXT",
+                "title": "app2_hicon3",
+                "value": ""
+            },
+            "app2_ht4": {
+                "index": 62,
+                "type": "TEXT",
+                "title": "app2_ht4",
+                "value": ""
+            },
+            "app2_hi4": {
+                "index": 63,
+                "type": "TEXT",
+                "title": "app2_hi4",
+                "value": ""
+            },
+            "app2_hicon4": {
+                "index": 64,
+                "type": "TEXT",
+                "title": "app2_hicon4",
+                "value": ""
+            },
+            "app2_ht5": {
+                "index": 65,
+                "type": "TEXT",
+                "title": "app2_ht5",
+                "value": ""
+            },
+            "app2_hi5": {
+                "index": 66,
+                "type": "TEXT",
+                "title": "app2_hi5",
+                "value": ""
+            },
+            "app2_hicon5": {
+                "index": 67,
+                "type": "TEXT",
+                "title": "app2_hicon5",
+                "value": ""
+            },
+            "app2_ht6": {
+                "index": 68,
+                "type": "TEXT",
+                "title": "app2_ht6",
+                "value": ""
+            },
+            "app2_hi6": {
+                "index": 69,
+                "type": "TEXT",
+                "title": "app2_hi6",
+                "value": ""
+            },
+            "app2_hicon6": {
+                "index": 70,
+                "type": "TEXT",
+                "title": "app2_hicon6",
+                "value": ""
+            },
+            "app2_ht7": {
+                "index": 71,
+                "type": "TEXT",
+                "title": "app2_ht7",
+                "value": ""
+            },
+            "app2_hi7": {
+                "index": 72,
+                "type": "TEXT",
+                "title": "app2_hi7",
+                "value": ""
+            },
+            "app2_hicon7": {
+                "index": 73,
+                "type": "TEXT",
+                "title": "app2_hicon7",
+                "value": ""
+            },
+            "app2_ht8": {
+                "index": 74,
+                "type": "TEXT",
+                "title": "app2_ht8",
+                "value": ""
+            },
+            "app2_hi8": {
+                "index": 75,
+                "type": "TEXT",
+                "title": "app2_hi8",
+                "value": ""
+            },
+            "app2_hicon8": {
+                "index": 76,
+                "type": "TEXT",
+                "title": "app2_hicon8",
+                "value": ""
+            },
+            "app3_t": {
+                "index": 77,
+                "type": "TEXT",
+                "title": "app3_t",
+                "value": "Gallery"
+            },
+            "app3_i": {
+                "index": 78,
+                "type": "TEXT",
+                "title": "app3_i",
+                "value": "intent://gallery"
+            },
+            "app3_icon": {
+                "index": 79,
+                "type": "TEXT",
+                "title": "app3_icon",
+                "value": "photo"
+            },
+            "app3_ht3": {
+                "index": 80,
+                "type": "TEXT",
+                "title": "app3_ht3",
+                "value": "Back"
+            },
+            "app3_hi3": {
+                "index": 81,
+                "type": "TEXT",
+                "title": "app3_hi3",
+                "value": "0"
+            },
+            "app3_hicon3": {
+                "index": 82,
+                "type": "TEXT",
+                "title": "app3_hicon3",
+                "value": "arrow-left"
+            },
+            "app4_t": {
+                "index": 83,
+                "type": "TEXT",
+                "title": "app4_t",
+                "value": "Sena"
+            },
+            "app4_i": {
+                "index": 84,
+                "type": "TEXT",
+                "title": "app4_i",
+                "value": "intent://sena"
+            },
+            "app4_icon": {
+                "index": 85,
+                "type": "TEXT",
+                "title": "app4_icon",
+                "value": ""
+            },
+            "app4_ht4": {
+                "index": 86,
+                "type": "TEXT",
+                "title": "app4_ht4",
+                "value": "Back"
+            },
+            "app4_hi4": {
+                "index": 87,
+                "type": "TEXT",
+                "title": "app4_hi4",
+                "value": "0"
+            },
+            "app4_hicon4": {
+                "index": 88,
+                "type": "TEXT",
+                "title": "app4_hicon4",
+                "value": "arrow-left"
+            },
+            "app5_t": {
+                "index": 89,
+                "type": "TEXT",
+                "title": "app5_t",
+                "value": "PwrAmp"
+            },
+            "app5_i": {
+                "index": 90,
+                "type": "TEXT",
+                "title": "app5_i",
+                "value": "intent://poweramp"
+            },
+            "app5_icon": {
+                "index": 91,
+                "type": "TEXT",
+                "title": "app5_icon",
+                "value": "player-play"
+            },
+            "app5_ht5": {
+                "index": 92,
+                "type": "TEXT",
+                "title": "app5_ht5",
+                "value": "Back"
+            },
+            "app5_hi5": {
+                "index": 93,
+                "type": "TEXT",
+                "title": "app5_hi5",
+                "value": "0"
+            },
+            "app5_hicon5": {
+                "index": 94,
+                "type": "TEXT",
+                "title": "app5_hicon5",
+                "value": "arrow-left"
+            },
+            "app6_t": {
+                "index": 95,
+                "type": "TEXT",
+                "title": "app6_t",
+                "value": "Moon"
+            },
+            "app6_i": {
+                "index": 96,
+                "type": "TEXT",
+                "title": "app6_i",
+                "value": "intent://moonreader"
+            },
+            "app6_icon": {
+                "index": 97,
+                "type": "TEXT",
+                "title": "app6_icon",
+                "value": "book"
+            },
+            "app6_ht6": {
+                "index": 98,
+                "type": "TEXT",
+                "title": "app6_ht6",
+                "value": "Back"
+            },
+            "app6_hi6": {
+                "index": 99,
+                "type": "TEXT",
+                "title": "app6_hi6",
+                "value": "0"
+            },
+            "app6_hicon6": {
+                "index": 100,
+                "type": "TEXT",
+                "title": "app6_hicon6",
+                "value": "arrow-left"
+            },
+            "app7_t": {
+                "index": 101,
+                "type": "TEXT",
+                "title": "app7_t",
+                "value": "Voice"
+            },
+            "app7_i": {
+                "index": 102,
+                "type": "TEXT",
+                "title": "app7_i",
+                "value": "intent://voice"
+            },
+            "app7_icon": {
+                "index": 103,
+                "type": "TEXT",
+                "title": "app7_icon",
+                "value": "microphone"
+            },
+            "app7_ht7": {
+                "index": 104,
+                "type": "TEXT",
+                "title": "app7_ht7",
+                "value": "Back"
+            },
+            "app7_hi7": {
+                "index": 105,
+                "type": "TEXT",
+                "title": "app7_hi7",
+                "value": "0"
+            },
+            "app7_hicon7": {
+                "index": 106,
+                "type": "TEXT",
+                "title": "app7_hicon7",
+                "value": "arrow-left"
+            },
+            "app8_t": {
+                "index": 107,
+                "type": "TEXT",
+                "title": "app8_t",
+                "value": "Blank8"
+            },
+            "app8_i": {
+                "index": 108,
+                "type": "TEXT",
+                "title": "app8_i",
+                "value": "intent://blank"
+            },
+            "app8_icon": {
+                "index": 109,
+                "type": "TEXT",
+                "title": "app8_icon",
+                "value": "square"
+            },
+            "app8_ht8": {
+                "index": 110,
+                "type": "TEXT",
+                "title": "app8_ht8",
+                "value": "Back"
+            },
+            "app8_hi8": {
+                "index": 111,
+                "type": "TEXT",
+                "title": "app8_hi8",
+                "value": "0"
+            },
+            "app8_hicon8": {
+                "index": 112,
+                "type": "TEXT",
+                "title": "app8_hicon8",
+                "value": "arrow-left"
+            },
+            "icon_vis": {
+                "index": 3,
+                "type": "TEXT",
+                "title": "Icon_Vis",
+                "description": "Icon Visibility: Set this to either true or false (all lowercase).",
+                "value": "false"
+            },
+            "font": {
+                "index": 5,
+                "type": "FONT",
+                "title": "Font",
+                "description": "Font type",
+                "value": "kfile://org.kustom.provider/fonts/RobotoFlex.ttf"
+            },
+            "font_pdg": {
+                "index": 11,
+                "type": "TEXT",
+                "title": "Font_Pdg",
+                "description": "Font padding multiplier when Icon is visible.",
+                "value": "0.70"
+            },
+            "font_max": {
+                "index": 8,
+                "type": "TEXT",
+                "title": "Font_Max",
+                "description": "Maximum size of the font field so that all textual objects fit neatly inside the provided squares.",
+                "value": "$mu(max, \r\n  tc(len, gv(app1_t)), \r\n  tc(len, gv(app2_t)), \r\n  tc(len, gv(app3_t)), \r\n  tc(len, gv(app4_t)), \r\n  tc(len, gv(app5_t)), \r\n  tc(len, gv(app6_t)), \r\n  tc(len, gv(app7_t)), \r\n  tc(len, gv(app8_t))\r\n)$"
+            },
+            "font_scl": {
+                "index": 9,
+                "type": "TEXT",
+                "title": "Font_Scl",
+                "description": "Your Shrink Percentage Variable.",
+                "value": "1.0"
+            },
+            "max_wdth": {
+                "index": 10,
+                "type": "TEXT",
+                "title": "Max_Wdth",
+                "description": "The maximum physical horizontal space (in pixels) a text layer is allowed to occupy inside a square before it deforms.",
+                "value": "$(gv(totalw) / if(gv(total) < 4, gv(total), 4)) - 24$"
+            },
+            "r1_cols": {
+                "index": 20,
+                "type": "TEXT",
+                "title": "R1_Cols",
+                "description": "How many columns exist in their specific row at any given microsecond",
+                "value": "$if(gv(total) <= 4, gv(total), if(gv(total) = 5, 3, if(gv(total) = 6, 3, 4)))$"
+            },
+            "r2_cols": {
+                "index": 21,
+                "type": "TEXT",
+                "title": "R2_Cols",
+                "description": "How many columns exist in their specific row at any given microsecond",
+                "value": "$if(gv(total) <= 4, 0, if(gv(total) = 5, 2, if(gv(total) = 6, 3, if(gv(total) = 7, 3, 4))))$"
+            },
+            "gutter": {
+                "index": 22,
+                "type": "NUMBER",
+                "title": "Gutter",
+                "description": "Width of the borders",
+                "min": 1,
+                "max": 10,
+                "value": 3.0
+            }
+        },
+        "internal_title": "C9D_Taskbar",
+        "viewgroup_items": [
+            {
+                "internal_type": "ShapeModule",
+                "internal_title": "BorderBG",
+                "internal_toggles": {
+                    "shape_width": 10,
+                    "shape_height": 10
+                },
+                "internal_formulas": {
+                    "shape_width": "$gv(totalw)$",
+                    "shape_height": "$gv(totalh)$"
+                },
+                "shape_type": "RECT"
+            },
+            {
+                "internal_type": "StackLayerModule",
+                "internal_title": "Master_V_Stack",
+                "config_stacking": "VERTICAL_CENTER",
+                "viewgroup_items": [
+                    {
+                        "internal_type": "StackLayerModule",
+                        "internal_title": "Row_1",
+                        "config_stacking": "HORIZONTAL_CENTER",
+                        "config_margin": 1.0,
+                        "viewgroup_items": [
+                            {
+                                "internal_type": "OverlapLayerModule",
+                                "internal_title": "Square_1",
+                                "internal_toggles": {
+                                    "config_visible": 10
+                                },
+                                "internal_formulas": {
+                                    "config_visible": "$if(gv(total) >= 1, Always, Remove)$"
+                                },
+                                "internal_events": [
+                                    {
+                                        "type": "SINGLE_TAP",
+                                        "action": "SWITCH_GLOBAL",
+                                        "switch": "active",
+                                        "switch_text": "$if(gv(active) = 0, 1, gv(active) = 1 | gv(tc(reg, \"app1_htActive\", \"Active\", gv(active))) = \"\", 0, gv(active))$"
+                                    }
+                                ],
+                                "viewgroup_items": [
+                                    {
+                                        "internal_type": "ShapeModule",
+                                        "internal_title": "bg",
+                                        "internal_toggles": {
+                                            "shape_width": 10,
+                                            "shape_height": 10,
+                                            "paint_color": 10
+                                        },
+                                        "internal_formulas": {
+                                            "shape_width": "$(gv(totalw) / gv(R1_Cols)) - gv(Gutter)$",
+                                            "shape_height": "$((gv(totalh) - gv(Gutter)) / gv(rows)) - gv(Gutter)$",
+                                            "paint_color": "$if(gv(active) = 0, gv(basecol), gv(active) = 1 | gv(tc(reg, \"app1_htActive\", \"Active\", gv(active))) = \"\", gv(altcol), gv(basecol))$"
+                                        },
+                                        "shape_type": "RECT"
+                                    },
+                                    {
+                                        "internal_type": "FontIconModule",
+                                        "internal_toggles": {
+                                            "icon_icon": 10,
+                                            "paint_color": 10,
+                                            "position_padding_bottom": 10
+                                        },
+                                        "internal_formulas": {
+                                            "icon_icon": "$if(gv(active) = 0, gv(app1_icon), gv(tc(reg, \"app1_hiconActive\", \"Active\", gv(active))))$",
+                                            "paint_color": "$if(gv(Icon_Vis) = \"false\" | (gv(active) = 0 & gv(app1_icon) = \"\") | (gv(active) > 0 & gv(tc(reg, \"app1_hiconActive\", \"Active\", gv(active))) = \"\"), #00000000, gv(textcol))$",
+                                            "position_padding_bottom": "$if((gv(active) = 0 & gv(app1_icon) != \"\" & gv(app1_t) != \"\") | (gv(active) > 0 & gv(tc(reg, \"app1_hiconActive\", \"Active\", gv(active))) != \"\" & gv(tc(reg, \"app1_htActive\", \"Active\", gv(active))) != \"\"), ((gv(totalh) - (gv(rows) + 1)) / gv(rows)) * 0.20, 0)$"
+                                        },
+                                        "position_padding_bottom": 20.0
+                                    },
+                                    {
+                                        "internal_type": "TextModule",
+                                        "internal_title": "Label",
+                                        "internal_toggles": {
+                                            "paint_color": 10,
+                                            "position_padding_top": 10,
+                                            "text_size": 10,
+                                            "text_family": 100
+                                        },
+                                        "internal_formulas": {
+                                            "paint_color": "$if(gv(active) = 1 | gv(tc(reg, \"app1_htActive\", \"Active\", gv(active))) = \"\", #88FFFFFF, gv(textcol))$",
+                                            "position_padding_top": "$if(gv(Icon_Vis) = \"true\" & ((gv(active) = 0 & gv(app1_icon) != \"\" & gv(app1_t) != \"\") | (gv(active) > 0 & gv(tc(reg, \"app1_hiconActive\", \"Active\", gv(active))) != \"\" & gv(tc(reg, \"app1_htActive\", \"Active\", gv(active))) != \"\")), ((gv(totalh) - (gv(rows) + 1)) / gv(rows)) * gv(Font_Pdg), 0)$",
+                                            "text_size": "$if(gv(Icon_Vis) = \"false\", (gv(Max_Wdth) / gv(Font_Max)) * 1.6, mu(min, 16, (gv(Max_Wdth) / gv(Font_Max)) * 1.6)) * gv(Font_Scl)$"
+                                        },
+                                        "text_expression": "$if(gv(active) = 0, gv(app1_t), gv(tc(reg, \"app1_htActive\", \"Active\", gv(active))))$",
+                                        "position_padding_top": 75.0,
+                                        "internal_globals": {
+                                            "text_family": "font"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "internal_type": "OverlapLayerModule",
+                                "internal_title": "Square_2",
+                                "internal_toggles": {
+                                    "config_visible": 10
+                                },
+                                "internal_formulas": {
+                                    "config_visible": "$if(gv(total) >= 2, Always, Remove)$"
+                                },
+                                "internal_events": [
+                                    {
+                                        "type": "SINGLE_TAP",
+                                        "action": "SWITCH_GLOBAL",
+                                        "switch": "active",
+                                        "switch_text": "$if(gv(active) = 0, 2, gv(active) = 2 | gv(tc(reg, \"app2_htActive\", \"Active\", gv(active))) = \"\", 0, gv(active))$"
+                                    }
+                                ],
+                                "viewgroup_items": [
+                                    {
+                                        "internal_type": "ShapeModule",
+                                        "internal_title": "bg",
+                                        "internal_toggles": {
+                                            "shape_width": 10,
+                                            "shape_height": 10,
+                                            "paint_color": 10
+                                        },
+                                        "internal_formulas": {
+                                            "shape_width": "$(gv(totalw) / gv(R1_Cols)) - gv(Gutter)$",
+                                            "shape_height": "$((gv(totalh) - gv(Gutter)) / gv(rows)) - gv(Gutter)$",
+                                            "paint_color": "$if(gv(active) = 0, gv(basecol), gv(active) = 2 | gv(tc(reg, \"app2_htActive\", \"Active\", gv(active))) = \"\", gv(altcol), gv(basecol))$"
+                                        },
+                                        "shape_type": "RECT"
+                                    },
+                                    {
+                                        "internal_type": "FontIconModule",
+                                        "internal_toggles": {
+                                            "icon_icon": 10,
+                                            "paint_color": 10,
+                                            "position_padding_bottom": 10
+                                        },
+                                        "internal_formulas": {
+                                            "icon_icon": "$if(gv(active) = 0, gv(app2_icon), gv(tc(reg, \"app2_hiconActive\", \"Active\", gv(active))))$",
+                                            "paint_color": "$if(gv(Icon_Vis) = \"false\" | (gv(active) = 0 & gv(app2_icon) = \"\") | (gv(active) > 0 & gv(tc(reg, \"app2_hiconActive\", \"Active\", gv(active))) = \"\"), #00000000, gv(textcol))$",
+                                            "position_padding_bottom": "$if((gv(active) = 0 & gv(app2_icon) != \"\" & gv(app2_t) != \"\") | (gv(active) > 0 & gv(tc(reg, \"app2_hiconActive\", \"Active\", gv(active))) != \"\" & gv(tc(reg, \"app2_htActive\", \"Active\", gv(active))) != \"\"), ((gv(totalh) - (gv(rows) + 1)) / gv(rows)) * 0.20, 0)$"
+                                        },
+                                        "position_padding_bottom": 20.0
+                                    },
+                                    {
+                                        "internal_type": "TextModule",
+                                        "internal_title": "Label",
+                                        "internal_toggles": {
+                                            "paint_color": 10,
+                                            "position_padding_top": 10,
+                                            "text_size": 10,
+                                            "text_family": 100
+                                        },
+                                        "internal_formulas": {
+                                            "paint_color": "$if(gv(active) = 2 | gv(tc(reg, \"app2_htActive\", \"Active\", gv(active))) = \"\", #88FFFFFF, gv(textcol))$",
+                                            "position_padding_top": "$if(gv(Icon_Vis) = \"true\" & ((gv(active) = 0 & gv(app2_icon) != \"\" & gv(app2_t) != \"\") | (gv(active) > 0 & gv(tc(reg, \"app2_hiconActive\", \"Active\", gv(active))) != \"\" & gv(tc(reg, \"app2_htActive\", \"Active\", gv(active))) != \"\")), ((gv(totalh) - (gv(rows) + 1)) / gv(rows)) * gv(Font_Pdg), 0)$",
+                                            "text_size": "$if(gv(Icon_Vis) = \"false\", (gv(Max_Wdth) / gv(Font_Max)) * 1.6, mu(min, 16, (gv(Max_Wdth) / gv(Font_Max)) * 1.6)) * gv(Font_Scl)$"
+                                        },
+                                        "text_expression": "$if(gv(active) = 0, gv(app2_t), gv(tc(reg, \"app2_htActive\", \"Active\", gv(active))))$",
+                                        "position_padding_top": 75.0,
+                                        "internal_globals": {
+                                            "text_family": "font"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "internal_type": "OverlapLayerModule",
+                                "internal_title": "Square_3",
+                                "internal_toggles": {
+                                    "config_visible": 10
+                                },
+                                "internal_formulas": {
+                                    "config_visible": "$if(gv(total) >= 3, Always, Remove)$"
+                                },
+                                "internal_events": [
+                                    {
+                                        "type": "SINGLE_TAP",
+                                        "action": "SWITCH_GLOBAL",
+                                        "switch": "active",
+                                        "switch_text": "$if(gv(active) = 0, 3, gv(active) = 3 | gv(tc(reg, \"app3_htActive\", \"Active\", gv(active))) = \"\", 0, gv(active))$"
+                                    }
+                                ],
+                                "viewgroup_items": [
+                                    {
+                                        "internal_type": "ShapeModule",
+                                        "internal_title": "bg",
+                                        "internal_toggles": {
+                                            "shape_width": 10,
+                                            "shape_height": 10,
+                                            "paint_color": 10
+                                        },
+                                        "internal_formulas": {
+                                            "shape_width": "$(gv(totalw) / gv(R1_Cols)) - gv(Gutter)$",
+                                            "shape_height": "$((gv(totalh) - gv(Gutter)) / gv(rows)) - gv(Gutter)$",
+                                            "paint_color": "$if(gv(active) = 0, gv(basecol), gv(active) = 3 | gv(tc(reg, \"app3_htActive\", \"Active\", gv(active))) = \"\", gv(altcol), gv(basecol))$"
+                                        },
+                                        "shape_type": "RECT"
+                                    },
+                                    {
+                                        "internal_type": "FontIconModule",
+                                        "internal_toggles": {
+                                            "icon_icon": 10,
+                                            "paint_color": 10,
+                                            "position_padding_bottom": 10
+                                        },
+                                        "internal_formulas": {
+                                            "icon_icon": "$if(gv(active) = 0, gv(app3_icon), gv(tc(reg, \"app3_hiconActive\", \"Active\", gv(active))))$",
+                                            "paint_color": "$if(gv(Icon_Vis) = \"false\" | (gv(active) = 0 & gv(app3_icon) = \"\") | (gv(active) > 0 & gv(tc(reg, \"app3_hiconActive\", \"Active\", gv(active))) = \"\"), #00000000, gv(textcol))$",
+                                            "position_padding_bottom": "$if((gv(active) = 0 & gv(app3_icon) != \"\" & gv(app3_t) != \"\") | (gv(active) > 0 & gv(tc(reg, \"app3_hiconActive\", \"Active\", gv(active))) != \"\" & gv(tc(reg, \"app3_htActive\", \"Active\", gv(active))) != \"\"), ((gv(totalh) - (gv(rows) + 1)) / gv(rows)) * 0.20, 0)$"
+                                        },
+                                        "position_padding_bottom": 20.0
+                                    },
+                                    {
+                                        "internal_type": "TextModule",
+                                        "internal_title": "Label",
+                                        "internal_toggles": {
+                                            "paint_color": 10,
+                                            "position_padding_top": 10,
+                                            "text_size": 10,
+                                            "text_family": 100
+                                        },
+                                        "internal_formulas": {
+                                            "paint_color": "$if(gv(active) = 3 | gv(tc(reg, \"app3_htActive\", \"Active\", gv(active))) = \"\", #88FFFFFF, gv(textcol))$",
+                                            "position_padding_top": "$if(gv(Icon_Vis) = \"true\" & ((gv(active) = 0 & gv(app3_icon) != \"\" & gv(app3_t) != \"\") | (gv(active) > 0 & gv(tc(reg, \"app3_hiconActive\", \"Active\", gv(active))) != \"\" & gv(tc(reg, \"app3_htActive\", \"Active\", gv(active))) != \"\")), ((gv(totalh) - (gv(rows) + 1)) / gv(rows)) * gv(Font_Pdg), 0)$",
+                                            "text_size": "$if(gv(Icon_Vis) = \"false\", (gv(Max_Wdth) / gv(Font_Max)) * 1.6, mu(min, 16, (gv(Max_Wdth) / gv(Font_Max)) * 1.6)) * gv(Font_Scl)$"
+                                        },
+                                        "text_expression": "$if(gv(active) = 0, gv(app3_t), gv(tc(reg, \"app3_htActive\", \"Active\", gv(active))))$",
+                                        "position_padding_top": 75.0,
+                                        "internal_globals": {
+                                            "text_family": "font"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "internal_type": "OverlapLayerModule",
+                                "internal_title": "Square_4",
+                                "internal_toggles": {
+                                    "config_visible": 10
+                                },
+                                "internal_formulas": {
+                                    "config_visible": "$if(gv(total) = 4 | gv(total) >= 7, Always, Remove)$"
+                                },
+                                "internal_events": [
+                                    {
+                                        "type": "SINGLE_TAP",
+                                        "action": "SWITCH_GLOBAL",
+                                        "switch": "active",
+                                        "switch_text": "$if(gv(active) = 0, 4, gv(active) = 4 | gv(tc(reg, \"app4_htActive\", \"Active\", gv(active))) = \"\", 0, gv(active))$"
+                                    }
+                                ],
+                                "viewgroup_items": [
+                                    {
+                                        "internal_type": "ShapeModule",
+                                        "internal_title": "bg",
+                                        "internal_toggles": {
+                                            "shape_width": 10,
+                                            "shape_height": 10,
+                                            "paint_color": 10
+                                        },
+                                        "internal_formulas": {
+                                            "shape_width": "$(gv(totalw) / gv(R1_Cols)) - gv(Gutter)$",
+                                            "shape_height": "$((gv(totalh) - gv(Gutter)) / gv(rows)) - gv(Gutter)$",
+                                            "paint_color": "$if(gv(active) = 0, gv(basecol), gv(active) = 4 | gv(tc(reg, \"app4_htActive\", \"Active\", gv(active))) = \"\", gv(altcol), gv(basecol))$"
+                                        },
+                                        "shape_type": "RECT"
+                                    },
+                                    {
+                                        "internal_type": "FontIconModule",
+                                        "internal_toggles": {
+                                            "icon_icon": 10,
+                                            "paint_color": 10,
+                                            "position_padding_bottom": 10
+                                        },
+                                        "internal_formulas": {
+                                            "icon_icon": "$if(gv(active) = 0, gv(app4_icon), gv(tc(reg, \"app4_hiconActive\", \"Active\", gv(active))))$",
+                                            "paint_color": "$if(gv(Icon_Vis) = \"false\" | (gv(active) = 0 & gv(app4_icon) = \"\") | (gv(active) > 0 & gv(tc(reg, \"app4_hiconActive\", \"Active\", gv(active))) = \"\"), #00000000, gv(textcol))$",
+                                            "position_padding_bottom": "$if((gv(active) = 0 & gv(app4_icon) != \"\" & gv(app4_t) != \"\") | (gv(active) > 0 & gv(tc(reg, \"app4_hiconActive\", \"Active\", gv(active))) != \"\" & gv(tc(reg, \"app4_htActive\", \"Active\", gv(active))) != \"\"), ((gv(totalh) - (gv(rows) + 1)) / gv(rows)) * 0.20, 0)$"
+                                        },
+                                        "position_padding_bottom": 20.0
+                                    },
+                                    {
+                                        "internal_type": "TextModule",
+                                        "internal_title": "Label",
+                                        "internal_toggles": {
+                                            "paint_color": 10,
+                                            "position_padding_top": 10,
+                                            "text_size": 10,
+                                            "text_family": 100
+                                        },
+                                        "internal_formulas": {
+                                            "paint_color": "$if(gv(active) = 4 | gv(tc(reg, \"app4_htActive\", \"Active\", gv(active))) = \"\", #88FFFFFF, gv(textcol))$",
+                                            "position_padding_top": "$if(gv(Icon_Vis) = \"true\" & ((gv(active) = 0 & gv(app4_icon) != \"\" & gv(app4_t) != \"\") | (gv(active) > 0 & gv(tc(reg, \"app4_hiconActive\", \"Active\", gv(active))) != \"\" & gv(tc(reg, \"app4_htActive\", \"Active\", gv(active))) != \"\")), ((gv(totalh) - (gv(rows) + 1)) / gv(rows)) * gv(Font_Pdg), 0)$",
+                                            "text_size": "$if(gv(Icon_Vis) = \"false\", (gv(Max_Wdth) / gv(Font_Max)) * 1.6, mu(min, 16, (gv(Max_Wdth) / gv(Font_Max)) * 1.6)) * gv(Font_Scl)$"
+                                        },
+                                        "text_expression": "$if(gv(active) = 0, gv(app4_t), gv(tc(reg, \"app4_htActive\", \"Active\", gv(active))))$",
+                                        "position_padding_top": 75.0,
+                                        "internal_globals": {
+                                            "text_family": "font"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "internal_type": "StackLayerModule",
+                        "internal_title": "Row_2",
+                        "internal_toggles": {
+                            "config_visible": 10
+                        },
+                        "internal_formulas": {
+                            "config_visible": "$if(gv(total) >= 5, Always, Remove)$"
+                        },
+                        "config_stacking": "HORIZONTAL_CENTER",
+                        "config_margin": 1.0,
+                        "viewgroup_items": [
+                            {
+                                "internal_type": "OverlapLayerModule",
+                                "internal_title": "Square_5",
+                                "internal_toggles": {
+                                    "config_visible": 10
+                                },
+                                "internal_formulas": {
+                                    "config_visible": "$if(gv(total) >= 5, Always, Remove)$"
+                                },
+                                "internal_events": [
+                                    {
+                                        "type": "SINGLE_TAP",
+                                        "action": "SWITCH_GLOBAL",
+                                        "switch": "active",
+                                        "switch_text": "$if(gv(active) = 0, 5, gv(active) = 5 | gv(tc(reg, \"app5_htActive\", \"Active\", gv(active))) = \"\", 0, gv(active))$"
+                                    }
+                                ],
+                                "viewgroup_items": [
+                                    {
+                                        "internal_type": "ShapeModule",
+                                        "internal_title": "bg",
+                                        "internal_toggles": {
+                                            "shape_width": 10,
+                                            "shape_height": 10,
+                                            "paint_color": 10
+                                        },
+                                        "internal_formulas": {
+                                            "shape_width": "$(gv(totalw) / gv(R2_Cols)) - gv(Gutter)$",
+                                            "shape_height": "$((gv(totalh) - gv(Gutter)) / gv(rows)) - gv(Gutter)$",
+                                            "paint_color": "$if(gv(active) = 0, gv(basecol), gv(active) = 5 | gv(tc(reg, \"app5_htActive\", \"Active\", gv(active))) = \"\", gv(altcol), gv(basecol))$"
+                                        },
+                                        "shape_type": "RECT"
+                                    },
+                                    {
+                                        "internal_type": "FontIconModule",
+                                        "internal_toggles": {
+                                            "icon_icon": 10,
+                                            "paint_color": 10,
+                                            "position_padding_bottom": 10
+                                        },
+                                        "internal_formulas": {
+                                            "icon_icon": "$if(gv(active) = 0, gv(app5_icon), gv(tc(reg, \"app5_hiconActive\", \"Active\", gv(active))))$",
+                                            "paint_color": "$if(gv(Icon_Vis) = \"false\" | (gv(active) = 0 & gv(app5_icon) = \"\") | (gv(active) > 0 & gv(tc(reg, \"app5_hiconActive\", \"Active\", gv(active))) = \"\"), #00000000, gv(textcol))$",
+                                            "position_padding_bottom": "$if((gv(active) = 0 & gv(app5_icon) != \"\" & gv(app5_t) != \"\") | (gv(active) > 0 & gv(tc(reg, \"app5_hiconActive\", \"Active\", gv(active))) != \"\" & gv(tc(reg, \"app5_htActive\", \"Active\", gv(active))) != \"\"), ((gv(totalh) - (gv(rows) + 1)) / gv(rows)) * 0.20, 0)$"
+                                        },
+                                        "position_padding_bottom": 20.0
+                                    },
+                                    {
+                                        "internal_type": "TextModule",
+                                        "internal_title": "Label",
+                                        "internal_toggles": {
+                                            "paint_color": 10,
+                                            "position_padding_top": 10,
+                                            "text_size": 10,
+                                            "text_family": 100
+                                        },
+                                        "internal_formulas": {
+                                            "paint_color": "$if(gv(active) = 5 | gv(tc(reg, \"app5_htActive\", \"Active\", gv(active))) = \"\", #88FFFFFF, gv(textcol))$",
+                                            "position_padding_top": "$if(gv(Icon_Vis) = \"true\" & ((gv(active) = 0 & gv(app5_icon) != \"\" & gv(app5_t) != \"\") | (gv(active) > 0 & gv(tc(reg, \"app5_hiconActive\", \"Active\", gv(active))) != \"\" & gv(tc(reg, \"app5_htActive\", \"Active\", gv(active))) != \"\")), ((gv(totalh) - (gv(rows) + 1)) / gv(rows)) * gv(Font_Pdg), 0)$",
+                                            "text_size": "$if(gv(Icon_Vis) = \"false\", (gv(Max_Wdth) / gv(Font_Max)) * 1.6, mu(min, 16, (gv(Max_Wdth) / gv(Font_Max)) * 1.6)) * gv(Font_Scl)$"
+                                        },
+                                        "text_expression": "$if(gv(active) = 0, gv(app5_t), gv(tc(reg, \"app5_htActive\", \"Active\", gv(active))))$",
+                                        "position_padding_top": 75.0,
+                                        "internal_globals": {
+                                            "text_family": "font"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "internal_type": "OverlapLayerModule",
+                                "internal_title": "Square_6",
+                                "internal_toggles": {
+                                    "config_visible": 10
+                                },
+                                "internal_formulas": {
+                                    "config_visible": "$if(gv(total) = 5 | gv(total) >= 6, Always, Remove)$"
+                                },
+                                "internal_events": [
+                                    {
+                                        "type": "SINGLE_TAP",
+                                        "action": "SWITCH_GLOBAL",
+                                        "switch": "active",
+                                        "switch_text": "$if(gv(active) = 0, 6, gv(active) = 6 | gv(tc(reg, \"app6_htActive\", \"Active\", gv(active))) = \"\", 0, gv(active))$"
+                                    }
+                                ],
+                                "viewgroup_items": [
+                                    {
+                                        "internal_type": "ShapeModule",
+                                        "internal_title": "bg",
+                                        "internal_toggles": {
+                                            "shape_width": 10,
+                                            "shape_height": 10,
+                                            "paint_color": 10
+                                        },
+                                        "internal_formulas": {
+                                            "shape_width": "$(gv(totalw) / gv(R2_Cols)) - gv(Gutter)$",
+                                            "shape_height": "$((gv(totalh) - gv(Gutter)) / gv(rows)) - gv(Gutter)$",
+                                            "paint_color": "$if(gv(active) = 0, gv(basecol), gv(active) = 6 | gv(tc(reg, \"app6_htActive\", \"Active\", gv(active))) = \"\", gv(altcol), gv(basecol))$"
+                                        },
+                                        "shape_type": "RECT"
+                                    },
+                                    {
+                                        "internal_type": "FontIconModule",
+                                        "internal_toggles": {
+                                            "icon_icon": 10,
+                                            "paint_color": 10,
+                                            "position_padding_bottom": 10
+                                        },
+                                        "internal_formulas": {
+                                            "icon_icon": "$if(gv(active) = 0, gv(app6_icon), gv(tc(reg, \"app6_hiconActive\", \"Active\", gv(active))))$",
+                                            "paint_color": "$if(gv(Icon_Vis) = \"false\" | (gv(active) = 0 & gv(app6_icon) = \"\") | (gv(active) > 0 & gv(tc(reg, \"app6_hiconActive\", \"Active\", gv(active))) = \"\"), #00000000, gv(textcol))$",
+                                            "position_padding_bottom": "$if((gv(active) = 0 & gv(app6_icon) != \"\" & gv(app6_t) != \"\") | (gv(active) > 0 & gv(tc(reg, \"app6_hiconActive\", \"Active\", gv(active))) != \"\" & gv(tc(reg, \"app6_htActive\", \"Active\", gv(active))) != \"\"), ((gv(totalh) - (gv(rows) + 1)) / gv(rows)) * 0.20, 0)$"
+                                        },
+                                        "position_padding_bottom": 20.0
+                                    },
+                                    {
+                                        "internal_type": "TextModule",
+                                        "internal_title": "Label",
+                                        "internal_toggles": {
+                                            "paint_color": 10,
+                                            "position_padding_top": 10,
+                                            "text_size": 10,
+                                            "text_family": 100
+                                        },
+                                        "internal_formulas": {
+                                            "paint_color": "$if(gv(active) = 6 | gv(tc(reg, \"app6_htActive\", \"Active\", gv(active))) = \"\", #88FFFFFF, gv(textcol))$",
+                                            "position_padding_top": "$if(gv(Icon_Vis) = \"true\" & ((gv(active) = 0 & gv(app6_icon) != \"\" & gv(app6_t) != \"\") | (gv(active) > 0 & gv(tc(reg, \"app6_hiconActive\", \"Active\", gv(active))) != \"\" & gv(tc(reg, \"app6_htActive\", \"Active\", gv(active))) != \"\")), ((gv(totalh) - (gv(rows) + 1)) / gv(rows)) * gv(Font_Pdg), 0)$",
+                                            "text_size": "$if(gv(Icon_Vis) = \"false\", (gv(Max_Wdth) / gv(Font_Max)) * 1.6, mu(min, 16, (gv(Max_Wdth) / gv(Font_Max)) * 1.6)) * gv(Font_Scl)$"
+                                        },
+                                        "text_expression": "$if(gv(active) = 0, gv(app6_t), gv(tc(reg, \"app6_htActive\", \"Active\", gv(active))))$",
+                                        "position_padding_top": 75.0,
+                                        "internal_globals": {
+                                            "text_family": "font"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "internal_type": "OverlapLayerModule",
+                                "internal_title": "Square_7",
+                                "internal_toggles": {
+                                    "config_visible": 10
+                                },
+                                "internal_formulas": {
+                                    "config_visible": "$if(gv(total) = 6 | gv(total) >= 7, Always, Remove)$"
+                                },
+                                "internal_events": [
+                                    {
+                                        "type": "SINGLE_TAP",
+                                        "action": "SWITCH_GLOBAL",
+                                        "switch": "active",
+                                        "switch_text": "$if(gv(active) = 0, 7, gv(active) = 7 | gv(tc(reg, \"app7_htActive\", \"Active\", gv(active))) = \"\", 0, gv(active))$"
+                                    }
+                                ],
+                                "viewgroup_items": [
+                                    {
+                                        "internal_type": "ShapeModule",
+                                        "internal_title": "bg",
+                                        "internal_toggles": {
+                                            "shape_width": 10,
+                                            "shape_height": 10,
+                                            "paint_color": 10
+                                        },
+                                        "internal_formulas": {
+                                            "shape_width": "$(gv(totalw) / gv(R2_Cols)) - gv(Gutter)$",
+                                            "shape_height": "$((gv(totalh) - gv(Gutter)) / gv(rows)) - gv(Gutter)$",
+                                            "paint_color": "$if(gv(active) = 0, gv(basecol), gv(active) = 7 | gv(tc(reg, \"app7_htActive\", \"Active\", gv(active))) = \"\", gv(altcol), gv(basecol))$"
+                                        },
+                                        "shape_type": "RECT"
+                                    },
+                                    {
+                                        "internal_type": "FontIconModule",
+                                        "internal_toggles": {
+                                            "icon_icon": 10,
+                                            "paint_color": 10,
+                                            "position_padding_bottom": 10
+                                        },
+                                        "internal_formulas": {
+                                            "icon_icon": "$if(gv(active) = 0, gv(app7_icon), gv(tc(reg, \"app7_hiconActive\", \"Active\", gv(active))))$",
+                                            "paint_color": "$if(gv(Icon_Vis) = \"false\" | (gv(active) = 0 & gv(app7_icon) = \"\") | (gv(active) > 0 & gv(tc(reg, \"app7_hiconActive\", \"Active\", gv(active))) = \"\"), #00000000, gv(textcol))$",
+                                            "position_padding_bottom": "$if((gv(active) = 0 & gv(app7_icon) != \"\" & gv(app7_t) != \"\") | (gv(active) > 0 & gv(tc(reg, \"app7_hiconActive\", \"Active\", gv(active))) != \"\" & gv(tc(reg, \"app7_htActive\", \"Active\", gv(active))) != \"\"), ((gv(totalh) - (gv(rows) + 1)) / gv(rows)) * 0.20, 0)$"
+                                        },
+                                        "position_padding_bottom": 20.0
+                                    },
+                                    {
+                                        "internal_type": "TextModule",
+                                        "internal_title": "Label",
+                                        "internal_toggles": {
+                                            "paint_color": 10,
+                                            "position_padding_top": 10,
+                                            "text_size": 10,
+                                            "text_family": 100
+                                        },
+                                        "internal_formulas": {
+                                            "paint_color": "$if(gv(active) = 7 | gv(tc(reg, \"app7_htActive\", \"Active\", gv(active))) = \"\", #88FFFFFF, gv(textcol))$",
+                                            "position_padding_top": "$if(gv(Icon_Vis) = \"true\" & ((gv(active) = 0 & gv(app7_icon) != \"\" & gv(app7_t) != \"\") | (gv(active) > 0 & gv(tc(reg, \"app7_hiconActive\", \"Active\", gv(active))) != \"\" & gv(tc(reg, \"app7_htActive\", \"Active\", gv(active))) != \"\")), ((gv(totalh) - (gv(rows) + 1)) / gv(rows)) * gv(Font_Pdg), 0)$",
+                                            "text_size": "$if(gv(Icon_Vis) = \"false\", (gv(Max_Wdth) / gv(Font_Max)) * 1.6, mu(min, 16, (gv(Max_Wdth) / gv(Font_Max)) * 1.6)) * gv(Font_Scl)$"
+                                        },
+                                        "text_expression": "$if(gv(active) = 0, gv(app7_t), gv(tc(reg, \"app7_htActive\", \"Active\", gv(active))))$",
+                                        "position_padding_top": 75.0,
+                                        "internal_globals": {
+                                            "text_family": "font"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "internal_type": "OverlapLayerModule",
+                                "internal_title": "Square_8",
+                                "internal_toggles": {
+                                    "config_visible": 10
+                                },
+                                "internal_formulas": {
+                                    "config_visible": "$if(gv(total) = 8, Always, Remove)$"
+                                },
+                                "internal_events": [
+                                    {
+                                        "type": "SINGLE_TAP",
+                                        "action": "SWITCH_GLOBAL",
+                                        "switch": "active",
+                                        "switch_text": "$if(gv(active) = 0, 8, gv(active) = 8 | gv(tc(reg, \"app8_htActive\", \"Active\", gv(active))) = \"\", 0, gv(active))$"
+                                    }
+                                ],
+                                "viewgroup_items": [
+                                    {
+                                        "internal_type": "ShapeModule",
+                                        "internal_title": "bg",
+                                        "internal_toggles": {
+                                            "shape_width": 10,
+                                            "shape_height": 10,
+                                            "paint_color": 10
+                                        },
+                                        "internal_formulas": {
+                                            "shape_width": "$(gv(totalw) / gv(R2_Cols)) - gv(Gutter)$",
+                                            "shape_height": "$((gv(totalh) - gv(Gutter)) / gv(rows)) - gv(Gutter)$",
+                                            "paint_color": "$if(gv(active) = 0, gv(basecol), gv(active) = 8 | gv(tc(reg, \"app8_htActive\", \"Active\", gv(active))) = \"\", gv(altcol), gv(basecol))$"
+                                        },
+                                        "shape_type": "RECT"
+                                    },
+                                    {
+                                        "internal_type": "FontIconModule",
+                                        "internal_toggles": {
+                                            "icon_icon": 10,
+                                            "paint_color": 10,
+                                            "position_padding_bottom": 10
+                                        },
+                                        "internal_formulas": {
+                                            "icon_icon": "$if(gv(active) = 0, gv(app8_icon), gv(tc(reg, \"app8_hiconActive\", \"Active\", gv(active))))$",
+                                            "paint_color": "$if(gv(Icon_Vis) = \"false\" | (gv(active) = 0 & gv(app8_icon) = \"\") | (gv(active) > 0 & gv(tc(reg, \"app8_hiconActive\", \"Active\", gv(active))) = \"\"), #00000000, gv(textcol))$",
+                                            "position_padding_bottom": "$if((gv(active) = 0 & gv(app8_icon) != \"\" & gv(app8_t) != \"\") | (gv(active) > 0 & gv(tc(reg, \"app8_hiconActive\", \"Active\", gv(active))) != \"\" & gv(tc(reg, \"app8_htActive\", \"Active\", gv(active))) != \"\"), ((gv(totalh) - (gv(rows) + 1)) / gv(rows)) * 0.20, 0)$"
+                                        },
+                                        "position_padding_bottom": 20.0
+                                    },
+                                    {
+                                        "internal_type": "TextModule",
+                                        "internal_title": "Label",
+                                        "internal_toggles": {
+                                            "paint_color": 10,
+                                            "position_padding_top": 10,
+                                            "text_size": 10,
+                                            "text_family": 100
+                                        },
+                                        "internal_formulas": {
+                                            "paint_color": "$if(gv(active) = 8 | gv(tc(reg, \"app8_htActive\", \"Active\", gv(active))) = \"\", #88FFFFFF, gv(textcol))$",
+                                            "position_padding_top": "$if(gv(Icon_Vis) = \"true\" & ((gv(active) = 0 & gv(app8_icon) != \"\" & gv(app8_t) != \"\") | (gv(active) > 0 & gv(tc(reg, \"app8_hiconActive\", \"Active\", gv(active))) != \"\" & gv(tc(reg, \"app8_htActive\", \"Active\", gv(active))) != \"\")), ((gv(totalh) - (gv(rows) + 1)) / gv(rows)) * gv(Font_Pdg), 0)$",
+                                            "text_size": "$if(gv(Icon_Vis) = \"false\", (gv(Max_Wdth) / gv(Font_Max)) * 1.6, mu(min, 16, (gv(Max_Wdth) / gv(Font_Max)) * 1.6)) * gv(Font_Scl)$"
+                                        },
+                                        "text_expression": "$if(gv(active) = 0, gv(app8_t), gv(tc(reg, \"app8_htActive\", \"Active\", gv(active))))$",
+                                        "position_padding_top": 75.0,
+                                        "internal_globals": {
+                                            "text_family": "font"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
